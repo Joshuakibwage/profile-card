@@ -7,7 +7,7 @@ This project is part of the **Frontend Wizards Stage 0 Task** — focusing on **
 ---
 
 ## 🚀 Live Demo
-👉 [View on vercel]()  
+👉 [View on vercel](https://hng-stage-zero-five.vercel.app/)  
 
 ---
 
