@@ -1,0 +1,144 @@
+:root {
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --accent: #3b82f6;
+    --border: #e5e7eb;
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: "Inter", system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+    padding: 1rem;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+}
+
+.avatar-section {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    padding: 2rem 1rem;
+}
+
+.avatar-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.75rem;
+}
+
+#avatar-upload {
+    display: block;
+    margin: 0.5rem auto 0;
+    font-size: 0.9rem;
+}
+
+.user-info {
+    padding: 1.5rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0.5rem 0 1rem;
+}
+
+.timestamp {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.social-links a:focus,
+.social-links a:hover {
+    text-decoration: underline;
+    outline: none;
+}
+
+section h3 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--border);
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row;
+    }
+
+    .avatar-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .user-info {
+        flex: 2;
+        padding: 2rem;
+    }
+}
