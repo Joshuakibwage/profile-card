@@ -130,7 +130,9 @@
     <!-- About Me Page -->
     <section id="about" class="page">
         <div class="container">
+
             <h1 class="page-title">About Me</h1>
+            
             <main data-testid="test-about-page" class="about-content">
                 <section class="about-section" data-testid="test-about-bio">
                     <h2>Bio</h2>
@@ -173,6 +175,74 @@
             </main>
         </div>
     </section>
+
+
+    <!-- Contact Us Page -->
+    <section id="contact" class="page">
+        <div class="container">
+
+            <h1 class="page-title">Contact Us</h1>
+
+            <form class="contact-form" id="contact-form" novalidate>
+                <div class="success-message" data-testid="test-contact-success">
+                    Thank you for your message! We'll get back to you soon.
+                </div>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="full-name" 
+                        data-testid="test-contact-name" 
+                        required aria-describedby="name-error"
+                    >
+                    <div class="error-message" id="name-error" data-testid="test-contact-error-name">Please enter your full name</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        data-testid="test-contact-email" 
+                        required aria-describedby="email-error"
+                    >
+                    <div class="error-message" id="email-error" data-testid="test-contact-error-email">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        data-testid="test-contact-subject" 
+                        required aria-describedby="subject-error"
+                    >
+                    <div class="error-message" id="subject-error" data-testid="test-contact-error-subject">Please enter a subject</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        rows="5" 
+                        data-testid="test-contact-message" 
+                        required aria-describedby="message-error"
+                    ></textarea>
+                    <div class="error-message" id="message-error" data-testid="test-contact-error-message">Message must be at least 10 characters</div>
+                </div>
+
+                <button type="submit" class="btn-primary" data-testid="test-contact-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
 
   <script src="main.js"></script>
 </body>
