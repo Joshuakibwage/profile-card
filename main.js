@@ -1,13 +1,14 @@
-//navigation
+// Navigation 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
   const pages = document.querySelectorAll(".page");
-  const hamburger = document.querySelectorAll(".hamburger");
-  const navLinksContainer = document.querySelectorAll(".nav-links");
+  const hamburger = document.querySelector(".hamburger");
+  const navLinksContainer = document.querySelector(".nav-links");
   const timeDisplay = document.querySelector('[data-testid="test-user-time"]');
   const avatarUpload = document.getElementById("avatar-upload");
   const avatar = document.getElementById("avatar");
 
+  // Update time display for Stage 0 requirement
   function updateTime() {
     timeDisplay.textContent = Date.now();
   }
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
+      // Update active nav link
       navLinks.forEach((l) => l.classList.remove("active"));
       this.classList.add("active");
 
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    // Reset previous states
     resetValidation();
 
     // Get form values
@@ -106,16 +109,19 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
+    // If form is valid, show success message
     if (isValid) {
       successMessage.style.display = "block";
       contactForm.reset();
 
+      // Hide success message after 5 seconds
       setTimeout(() => {
         successMessage.style.display = "none";
       }, 5000);
     }
   });
 
+  // Helper functions for form validation
   function resetValidation() {
     const errorMessages = document.querySelectorAll(".error-message");
     errorMessages.forEach((msg) => {
