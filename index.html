@@ -11,91 +11,162 @@
     />
 </head>
 <body>
-    <article class="profile-card" data-testid="test-profile-card">
-        <figure class="avatar-section">
-            <img
-                src="images/avatar.jpeg"
-                alt="User avatar"
-                data-testid="test-user-avatar"
-                id="avatar"
-            />
-            <figcaption>
-                <input 
-                type="file" 
-                accept="image/*" 
-                id="avatar-upload" 
-                aria-label="Upload avatar image"
-                />
-            </figcaption>
-        </figure>
 
-        <section class="user-info">
-
-            <header>
-                <h2 data-testid="test-user-name">Joshua Kibwage</h2>
-            </header>
-
-            <p data-testid="test-user-bio">
-                A passionate frontend developer who loves building clean, user-friendly interfaces.
-            </p>
-
-            <p class="timestamp">
-                Time (ms): <span data-testid="test-user-time" id="time"></span>
-            </p>
-
-            <nav aria-label="Social Links">
-                <ul class="social-links" data-testid="test-user-social-links">
-                    <li>
-                        <a 
-                            href="https://twitter.com" 
-                            target="_blank" rel="noopener noreferrer" 
-                            data-testid="test-user-social-twitter">
-                                <i class="fab fa-twitter"></i> Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://linkedin.com" 
-                            target="_blank" rel="noopener noreferrer" 
-                            data-testid="test-user-social-linkedin">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://github.com" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            data-testid="test-user-social-github">
-                                <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </li>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">MyPortfolio</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About Me</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact Us</a></li>
                 </ul>
+                <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
+        </div>
+    </header>
 
-            <div class="hobbies">
 
-                <section>
-                    <h3>Hobbies</h3>
-                    <ul data-testid="test-user-hobbies">
-                        <li>Coding</li>
-                        <li>Traveling</li>
-                        <li>Coffee tasting</li>
+    <!-- Home Page (Stage 0) -->
+    <section id="home" class="page active">
+        <div class="container">
+            <h1 class="page-title">Welcome to My Portfolio</h1>
+            <article class="profile-card" data-testid="test-profile-card">
+                <figure class="avatar-section">
+                    <img
+                        src="https://via.placeholder.com/150"
+                        alt="User avatar"
+                        data-testid="test-user-avatar"
+                        id="avatar"
+                    />
+                    <figcaption>
+                        <input 
+                        type="file" 
+                        accept="image/*" 
+                        id="avatar-upload" 
+                        aria-label="Upload avatar image"
+                        />
+                    </figcaption>
+                </figure>
+
+                <section class="user-info">
+                    <header>
+                        <h2 data-testid="test-user-name">Joshua Kibwage</h2>
+                    </header>
+
+                    <p data-testid="test-user-bio">
+                        A passionate frontend developer who loves building clean, user-friendly interfaces.
+                    </p>
+
+                    <p class="timestamp">
+                        Time (ms): <span data-testid="test-user-time" id="time"></span>
+                    </p>
+
+                    <nav aria-label="Social Links">
+                        <ul class="social-links" data-testid="test-user-social-links">
+                            <li>
+                                <a 
+                                    href="https://twitter.com" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    data-testid="test-user-social-twitter">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="https://linkedin.com" 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    data-testid="test-user-social-linkedin">
+                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="https://github.com" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    data-testid="test-user-social-github">
+                                        <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="hobbies">
+                        <section>
+                            <h3>Hobbies</h3>
+                            <ul data-testid="test-user-hobbies">
+                                <li>Coding</li>
+                                <li>Traveling</li>
+                                <li>Coffee tasting</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h3>Dislikes</h3>
+                            <ul data-testid="test-user-dislikes">
+                                <li>Procrastination</li>
+                                <li>Cluttered UI</li>
+                                <li>Slow websites</li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- About Me Page -->
+    <section id="about" class="page">
+        <div class="container">
+            <h1 class="page-title">About Me</h1>
+            <main data-testid="test-about-page" class="about-content">
+                <section class="about-section" data-testid="test-about-bio">
+                    <h2>Bio</h2>
+                    <p>I'm a passionate frontend developer with 3 years of experience building user-friendly web applications. My journey began with a curiosity about how websites work, and has evolved into a deep appreciation for the intersection of design and technology.</p>
+                    <p>When I'm not coding, I enjoy hiking, photography, and experimenting with new recipes in the kitchen.</p>
+                </section>
+
+                <section class="about-section" data-testid="test-about-goals">
+                    <h2>Goals in this Program</h2>
+                    <ul>
+                        <li>Master advanced JavaScript concepts and modern frameworks</li>
+                        <li>Improve my understanding of web accessibility standards</li>
+                        <li>Learn best practices for performance optimization</li>
+                        <li>Build a portfolio of diverse, complex projects</li>
+                        <li>Network with other developers and potential employers</li>
                     </ul>
                 </section>
 
-                <section>
-                    <h3>Dislikes</h3>
-                    <ul data-testid="test-user-dislikes">
-                        <li>Procrastination</li>
-                        <li>Cluttered UI</li>
-                        <li>Slow websites</li>
+                <section class="about-section" data-testid="test-about-confidence">
+                    <h2>Areas of Low Confidence</h2>
+                    <p>While I'm comfortable with HTML, CSS, and basic JavaScript, I sometimes struggle with:</p>
+                    <ul>
+                        <li>Advanced state management in complex applications</li>
+                        <li>Implementing comprehensive testing strategies</li>
+                        <li>Optimizing for performance at scale</li>
+                        <li>Keeping up with the rapidly evolving JavaScript ecosystem</li>
                     </ul>
                 </section>
-            </div>
 
-        </section>
-    </article>
+                <section class="about-section" data-testid="test-about-future-note">
+                    <h2>Note to Future Self</h2>
+                    <p>Remember why you started this journey - because you love creating things that people find useful and enjoyable. Don't get discouraged by challenges; they're opportunities to grow. Keep learning, stay curious, and don't forget to celebrate your progress along the way.</p>
+                </section>
+
+                <section class="about-section" data-testid="test-about-extra">
+                    <h2>Extra Thoughts</h2>
+                    <p>I believe that great web development is about more than just writing code - it's about understanding users, solving problems, and creating experiences that are both functional and delightful.</p>
+                    <p>I'm excited to continue growing as a developer and contributing to projects that make a positive impact.</p>
+                </section>
+            </main>
+        </div>
+    </section>
 
   <script src="main.js"></script>
 </body>
